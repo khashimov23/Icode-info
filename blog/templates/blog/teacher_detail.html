@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="text-align: center; padding: 50px;">
+    <img src="{{ teacher.rasm.url }}" width="150px" height="150px" style="border-radius: 50%;">
+    <h2>{{ teacher.ism }} {{ teacher.familya }}</h2>
+    <ul style="list-style: none;">
+        <li>Yoshi | {{ teacher.yosh }}</li>
+        <li>Fani | {{ teacher.fan }}</li>
+        <li>Telefon | {{ teacher.telfon }}</li>
+    </ul>
+</div>
+{% endblock %}

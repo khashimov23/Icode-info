@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th, td{
+        padding: 5px 15px;
+    }
+    .navbar {
+        background-color: #212529;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-left: 20px;
+        color: white;
+    }
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    .wrapper {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .footer {
+        background-color: #eeeeee;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+    .footer ul:last-child {
+        list-style: unset;
+    }
+    .footer ul li {
+        list-style: none;
+    }
+    .footer ul li a {
+        text-decoration: unset;
+        color: #212529;
+        font-size: 23px;
+    }
+    p:last-child {
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="{% url 'teachers' %}">Teachers</a></li>
+            <li><a href="{% url 'students' %}">Students</a></li>
+            <li><a href="{% url 'rooms' %}">Rooms</a></li>
+            <li><a href="{% url 'forms' %}">New Students</a></li>
+
+        </ul>
+    </div>
+    <div style="text-align: center;">
+        <h1>iCode</h1>
+        <p>Information technology academy</p>
+    </div>
+    {% block content %}
+    {% endblock %}
+<!-- 
+    <div class="wrapper">
+        <div class="footer">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <p>Copyright iCode Academy 2021</p>
+    </div> -->
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'blog/base.html' %}
+    {% block content %}
+    <div>
+        <h3 style="text-align: center;">Grant asosida qabul qilinganlar</h3>
+        <table border="2" style="margin: 0 auto">
+            <tr>
+                <th>Id</th>
+                <th>Ism</th>
+                <th>Familya</th>
+                <th>Yosh</th>
+                <th>Telfon</th>
+                <th>Fakultet</th>
+            </tr>
+            {% for student in grant_studentlar %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.ism }}</td>
+                    <td>{{ student.familya }}</td>
+                    <td>{{ student.yosh }}</td>
+                    <td>{{ student.telfon }}</td>
+                    <td>{{ student.yonalish }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        <h3 style="text-align: center;">Kontrakt asosida qabul qilinganlar</h3>
+        <table border="2" style="margin: 0 auto">
+            <tr>
+                <th>Id</th>
+                <th>Ism</th>
+                <th>Familya</th>
+                <th>Yosh</th>
+                <th>Telfon</th>
+                <th>Fakultet</th>
+            </tr>
+            {% for student in kontrakt_studentlar %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.ism }}</td>
+                    <td>{{ student.familya }}</td>
+                    <td>{{ student.yosh }}</td>
+                    <td>{{ student.telfon }}</td>
+                    <td>{{ student.yonalish }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endblock %}

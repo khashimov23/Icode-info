@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div>
+        <table border="2" style="margin: 0 auto">
+            <tr>
+                <th>Id</th>
+                <th>Ism</th>
+                <th>Familya</th>
+                <th>Yosh</th>
+                <th>Telfon</th>
+                <th>Fan</th>
+                <th>Xona raqami</th>
+                <th>Action</th>
+            </tr>
+            {% for teacher in teacherlar %}
+                <tr>
+                    <td>{{ teacher.id }}</td>
+                    <td>{{ teacher.ism }}</td>
+                    <td>{{ teacher.familya }}</td>
+                    <td>{{ teacher.yosh }}</td>
+                    <td>{{ teacher.telfon }}</td>
+                    <td>{{ teacher.fan }}</td>
+                    <td>
+                        {% for xona in teacher.xonalar.all %}
+                            <span>{{xona}}, </span>
+                        {% endfor %}
+                    </td>
+                    <td><a href="{{ teacher.get_absolute_url }}">detail</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
